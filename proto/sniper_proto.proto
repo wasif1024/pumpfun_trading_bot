@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package sniper_proto;
+
+service SniperService {
+  rpc SnipeToken(SnipeRequest) returns (SnipeResponse);
+}
+
+message SnipeRequest {
+  string token_address = 1;
+}
+
+message SnipeResponse {
+  bool success = 1;
+  string message = 2;
+}
